@@ -15,7 +15,10 @@ try:
 except ImportError:
     # the user has a downlevel version of setuptools.
     print("Error: dbt requires setuptools v40.1.0 or higher.")
-    print('Please upgrade setuptools with "pip install --upgrade setuptools" ' "and try again")
+    print(
+        'Please upgrade setuptools with "pip install --upgrade setuptools" '
+        "and try again"
+    )
     sys.exit(1)
 
 
@@ -51,7 +54,7 @@ setup(
         "scripts/dbt",
     ],
     install_requires=[
-        "Jinja2>=3.0.0",
+        "Jinja2>=3.0.0,<3.1.0",
         "MarkupSafe==2.0.1",
         "agate>=1.6,<1.6.4",
         "click>=7.0,<9",
